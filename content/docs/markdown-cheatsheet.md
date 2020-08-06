@@ -37,8 +37,6 @@ $$
 f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
 $$
 
-And its inline equivalent: {{< katex >}}f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi{{< /katex >}}
-
 ## Hints
 
 {{< hint info >}}
