@@ -1,0 +1,13 @@
+baseURL = "https://public.nikhil.io/stats/"
+languageCode = "en-us"
+title = "Statistics Notes"
+
+# Needed for mermaid/katex shortcodes
+[markup]
+[markup.goldmark.renderer]
+    unsafe = true
+
+[params]
+    BookComments = false
+    BookLogo = 'logo.jpg'
+    BookMenuBundle = "/menu"
