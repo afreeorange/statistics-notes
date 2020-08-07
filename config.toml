@@ -14,4 +14,4 @@ theme = "book"
     BookMenuBundle = "/menu"
 
 [[deployment.targets]]
-    URL = "s3://public.nikhil.io?prefix=stats/"
+    URL = "s3://public.nikhil.io?region=us-east-1&prefix=stats/"
