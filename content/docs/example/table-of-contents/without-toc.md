@@ -1,6 +1,6 @@
 ---
 title: Without ToC
-weight: 1
+weight: 2
 bookToc: false
 ---
 

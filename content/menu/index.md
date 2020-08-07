@@ -2,8 +2,6 @@
 headless: true
 ---
 
-- [**Regression - Simple**]({{< relref "/docs/regression-simple" >}})
-  - [OLS Estimation]({{< relref "/docs/regression-simple/regression-ols-simple" >}})
 - [**Example Site**]({{< relref "/docs/example" >}})
 - [Table of Contents]({{< relref "/docs/example/table-of-contents" >}})
   - [With ToC]({{< relref "/docs/example/table-of-contents/with-toc" >}})
@@ -13,4 +11,12 @@ headless: true
     - [4th]({{< relref "/docs/example/collapsed/3rd-level/4th-level" >}})
 <br />
 
-- [**Markdown Cheatsheet**]({{< relref "/docs/markdown-cheatsheet" >}})
+- **Shortcodes**
+- [Buttons]({{< relref "/docs/shortcodes/buttons" >}})
+- [Columns]({{< relref "/docs/shortcodes/columns" >}})
+- [Expand]({{< relref "/docs/shortcodes/expand" >}})
+- [Hints]({{< relref "/docs/shortcodes/hints" >}})
+- [Katex]({{< relref "/docs/shortcodes/katex" >}})
+- [Mermaid]({{< relref "/docs/shortcodes/mermaid" >}})
+- [Tabs]({{< relref "/docs/shortcodes/tabs" >}})
+<br />

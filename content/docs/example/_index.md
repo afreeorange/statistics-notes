@@ -4,7 +4,7 @@ bookFlatSection: true
 title: "Example Site"
 ---
 
-# Introduction!
+# Introduction
 
 ## Ferre hinnitibus erat accipitrem dixi Troiae tollens
 

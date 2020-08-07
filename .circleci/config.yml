@@ -8,7 +8,7 @@ jobs:
 
       - run:
           name: Building
-          command: hugo -D
+          command: hugo
 
       - run:
           name: Deploying
