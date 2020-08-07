@@ -10,8 +10,8 @@ theme = "book"
 
 [params]
     BookComments = false
-    BookLogo = "logo.jpg"
     BookMenuBundle = "/menu"
 
 [[deployment.targets]]
-    URL = "s3://public.nikhil.io?region=us-east-1&prefix=stats/"
+    URL = "s3://public.nikhil.io?prefix=stats/"
+

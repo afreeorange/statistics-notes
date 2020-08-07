@@ -1,6 +1,6 @@
-# Nikhil's Statistics Notes
+# My Statistics Notes [![CircleCI](https://circleci.com/gh/afreeorange/statistics-notes.svg?style=svg)](https://circleci.com/gh/afreeorange/statistics-notes)
 
-[![CircleCI](https://circleci.com/gh/afreeorange/statistics-notes.svg?style=svg)](https://circleci.com/gh/afreeorange/statistics-notes)
+Notes from my various classes at Georgia Tech 🐝
 
 ## References
 
