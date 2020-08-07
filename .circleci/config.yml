@@ -7,6 +7,12 @@ jobs:
       - checkout
 
       - run:
+          name: Submodule setup
+          command: |
+            git submodule init
+            git submodule update
+
+      - run:
           name: Building
           command: hugo
 

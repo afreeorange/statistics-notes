@@ -1,4 +1,4 @@
-baseURL = "/stats"
+baseURL = "https://public.nikhil.io/stats/"
 languageCode = "en-us"
 title = "Statistics Notes"
 theme = "book"
