@@ -23,7 +23,12 @@ jobs:
 
 # All because we want to use Contexts... 🤦‍♀️
 workflows:
+  version: 2
   build-notebook:
     jobs:
       - build:
           context: AWS
+          filters:
+            branches:
+              only: master
+
