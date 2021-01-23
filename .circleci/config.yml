@@ -15,7 +15,7 @@ jobs:
 
       - run:
           name: Building
-          command: hugo
+          command: hugo --minify
 
       - run:
           name: Deploying
