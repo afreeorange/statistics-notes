@@ -9,7 +9,7 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}/{
 eleventyExcludeFromCollections: true
 ---
 
-{% from "macros.njk" import singleNote %}
+{% from "macros.njk" import singleNote with context %}
 
 {% for note in notes %}
   {{ singleNote(note) }}
