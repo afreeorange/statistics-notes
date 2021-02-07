@@ -3,18 +3,16 @@ layout: page
 title: Bookmarks
 ---
 
-## A List of Sites I Like Visiting
-
-### YouTube Channels
+## YouTube Channels
 
 * [jbstatistics](https://www.youtube.com/channel/UCiHi6xXLzi9FMr9B0zgoHqA)  - Clear, short, precise
 * [zedstatistics](https://www.youtube.com/channel/UC6AVa0vSrCpuskzGDDKz_EQ) - This man has saved my arse more times than I care to count
 
-### Probability and Statistics
+## Probability and Statistics
 
 * [ISYE 6739 - Probability and Statistics](https://www2.isye.gatech.edu/~sman/courses/6739/) - Professor Goldsman's course.
 
-### Unfiled Bookmarks
+## Unfiled Bookmarks
 
 * http://analystnotes.com/cfa-study-notes-types-of-multifactor-models.html
 * http://essedunet.nsd.uib.no/cms/topics/regression/7/2.html

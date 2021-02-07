@@ -102,6 +102,10 @@ section {
   margin: calc(var(--root-spacing) * 2.5) 0;
 }
 
+article > header > h2 > a {
+  text-decoration: none;
+}
+
 article > footer {
   color: gray;
 }

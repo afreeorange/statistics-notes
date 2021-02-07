@@ -1,8 +1,11 @@
+const embedEverything = require("eleventy-plugin-embed-everything");
 const format = require("date-fns/format");
 const formatISO = require("date-fns/formatISO");
 const toDate = require("date-fns/toDate");
 const { v5: uuidv5 } = require("uuid");
 const HTMLBeautify = require("js-beautify").html;
+
+const site = require("./_data/site");
 
 const searchFilterData = require("./_eleventy/search__data");
 
@@ -74,7 +77,7 @@ const parser = require("markdown-it")({
     removeMarker: false,
   });
 
-getAllTags = (collection) => {
+const getAllTags = (collection) => {
   let tagList = [];
   let tagMap = {};
 
@@ -100,9 +103,9 @@ getAllTags = (collection) => {
 
       for (const tag of tags) {
         if (Object.keys(tagMap).indexOf(tag) === -1) {
-          tagMap[tag.toLowerCase()] = 1;
+          tagMap[tag.toString().toLowerCase()] = 1;
         } else {
-          tagMap[tag.toLowerCase()] += 1;
+          tagMap[tag.toString().toLowerCase()] += 1;
         }
       }
     }
@@ -158,9 +161,29 @@ module.exports = (eleventyConfig) => {
    */
 
   eleventyConfig.addPassthroughCopy({
-    assets: "assets",
+    _assets: "assets",
+    _misc: "misc",
     "robots.txt": "robots.txt",
   });
+
   eleventyConfig.addTransform("beautify", beautify);
+
   eleventyConfig.setLibrary("md", parser);
+
+  eleventyConfig.addPlugin(embedEverything, {
+    use: ["youtube", "vimeo"],
+    youtube: {
+      options: {
+        lite: {
+          css: {
+            path: `${site.url}/assets/yt.css`,
+          },
+          js: {
+            path: `${site.url}/assets/yt.js`,
+          },
+        },
+        lazy: true,
+      },
+    },
+  });
 };
