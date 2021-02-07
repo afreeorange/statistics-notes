@@ -5,7 +5,7 @@ orbs:
   aws-s3: circleci/aws-s3@2.0.0
 
 jobs:
-  build-and-deploy-log:
+  build-and-deploy:
     docker:
       # This is their "Next Generation" image
       # https://circleci.com/developer/images/image/cimg/node
