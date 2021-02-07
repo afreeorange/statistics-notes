@@ -94,6 +94,4 @@ const askQuestions = async () => {
   return `notes/${year}/${postFile}`;
 };
 
-askQuestions().then((f) =>
-  console.log("✔ Created", f)
-);
+askQuestions().then((f) => console.log("✔ Created", f));

@@ -1,23 +1,37 @@
 :root {
+  /* Font Families. These are system fonts and cost nothing */
   --monospace-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
     monospace;
   --sans-serif-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  --serif-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+
+  /* Some measurements. Rely on browser defaults for all else */
   --line-height: 165%;
-  --root-spacing: 1em;
   --font-size: 14px;
+  --root-spacing: 1em;
+
+  /* Basic color stuff */
+  --color-primary: #111;
+  --color-secondary: blue;
+  --color-tertiary: gray;
 }
 
 body {
-  max-width: 768px;
-  margin: 0 auto !important;
+  box-sizing: content-box;
+  color: var(--color-primary);
   font-family: var(--sans-serif-family);
   font-size: var(--font-size);
   line-height: var(--line-height);
+  margin: 0 auto !important;
+  max-width: 768px;
+  padding: 0 var(--root-spacing);
 }
 
 body > header > nav > h1 > a {
-  color: blue;
+  color: var(--color-secondary);
   text-decoration: none;
 }
 
@@ -39,6 +53,7 @@ body > footer > nav > ul {
   margin: 0;
   padding: 0;
 }
+
 body > footer > nav > ul > li {
   display: inline-block;
   margin-right: calc(var(--root-spacing) / 2);
@@ -46,36 +61,48 @@ body > footer > nav > ul > li {
 
 a {
   color: black;
-  text-decoration-color: blue;
+  text-decoration-color: var(--color-secondary);
 }
+
 a:hover {
-  color: blue;
+  color: var(--color-secondary);
+}
+
+em {
+  font-family: var(--serif-family);
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  margin-left: var(--root-spacing);
+}
+
+blockquote {
+  border-left: 1px solid var(--color-tertiary);
+  margin: 0;
+  padding-left: var(--root-spacing);
 }
 
 article {
   margin: calc(var(--root-spacing) * 2.5) 0;
 }
 
-article figure {
-  margin: 0;
-  padding: 0;
-}
-
-article figcaption {
-  margin-left: var(--root-spacing);
-}
-
-article blockquote {
-  border-left: 1px solid blue;
-  margin: 0;
-  padding-left: var(--root-spacing);
-}
-
 article > footer {
+  color: gray;
   font-size: smaller;
+}
+
+article > footer a {
+  color: gray;
+  text-decoration-color: gray;
+  text-decoration-style: dotted;
 }
 
 .katex-display {
   margin: calc(var(--root-spacing) * 2) 0;
-  text-align: left!important;
+  text-align: left !important;
 }

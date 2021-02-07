@@ -7,7 +7,7 @@ layout: default
     {% set sortedTags = tags | sort %}
     Tagged
     {% for tag in sortedTags %}
-      <a href="/tags/{{tag | urlencode}}" title="Notes tagged {{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      <a href="/tags/{{tag}}" title="Notes tagged {{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
     {% endfor %}
   {% endif %}
 {% endmacro %}
