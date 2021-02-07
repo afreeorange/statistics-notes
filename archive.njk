@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
   <ul>
     {%- for tag in collections.tags | sort(false, true, "name") %}
       <li>
-        <a href="/tags/{{ tag.name | lower }}" title="Posts tagged {{ tag.name | lower }}">{{ tag.name }}</a>
+        <a href="{{ site.url }}/tags/{{ tag.name | lower }}" title="Posts tagged {{ tag.name | lower }}">{{ tag.name }}</a>
         ({{ tag.count }})
       </li>
     {% endfor -%}
@@ -35,7 +35,3 @@ eleventyExcludeFromCollections: true
   <strong>{{ collections.tags | length }}</strong>
   tags
 </section>
-
-{# <script type="text/javascript" src="/assets/js/algolia.js"></script>
-<script type="text/javascript" src="/assets/js/mustache.js"></script>
-<script type="text/javascript" src="/assets/js/search.js"></script> #}

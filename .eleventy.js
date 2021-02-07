@@ -157,7 +157,10 @@ module.exports = (eleventyConfig) => {
    * Other
    */
 
-  eleventyConfig.addPassthroughCopy({ assets: "assets" });
+  eleventyConfig.addPassthroughCopy({
+    assets: "assets",
+    "robots.txt": "robots.txt",
+  });
   eleventyConfig.addTransform("beautify", beautify);
   eleventyConfig.setLibrary("md", parser);
 };
