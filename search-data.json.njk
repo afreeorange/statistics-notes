@@ -1,0 +1,24 @@
+---
+permalink: /search-data.json
+eleventyExcludeFromCollections: true
+---
+{
+  "data":
+  [{%- for note in collections.notes -%}
+    {
+      "objectID": "{{ note.fileSlug | uuid }}",
+      "humanTimestamp": "{{ note.data.date | date("do MMMM yyyy") }}",
+      "timestamp": "{{ note.date | toISODateString }}",
+
+      {%- set content_first_pass = note.templateContent | striptags(false) | escape -%}
+
+      {# Algolia only allows for 10KB record size. Minimize the noise. #}
+      {%- set content_secondpass = content_first_pass.val | makeSearchString -%}
+
+      "title": "{{ note.data.title | escape }}",
+      "content": "{{ content_secondpass }}",
+      "tags": {{ note.data.tags | dump | safe }},
+      "url": "{{ site.url }}{{ note.url }}"
+    }{%- if not loop.last -%}, {% endif -%}
+  {% endfor -%}]
+}

@@ -1,0 +1,41 @@
+---
+layout: default
+title: Archive
+eleventyExcludeFromCollections: true
+---
+
+<section>
+  <header>
+    <h2>Search</h2>
+  </header>
+  No search yet but
+  <kbd>Ctrl</kbd>
+  +
+  <kbd>f</kbd>
+  <a href="{{ site.url }}/search-data.json" title="Search data">this file</a>.
+</section>
+
+<section>
+  <header>
+    <h2>Posts by Tag</h2>
+  </header>
+  <ul>
+    {%- for tag in collections.tags | sort(false, true, "name") %}
+      <li>
+        <a href="/tags/{{ tag.name | lower }}" title="Posts tagged {{ tag.name | lower }}">{{ tag.name }}</a>
+        ({{ tag.count }})
+      </li>
+    {% endfor -%}
+  </ul>
+</section>
+
+<section>
+  <strong>{{ collections.notes | length }}</strong>
+  notes with
+  <strong>{{ collections.tags | length }}</strong>
+  tags
+</section>
+
+{# <script type="text/javascript" src="/assets/js/algolia.js"></script>
+<script type="text/javascript" src="/assets/js/mustache.js"></script>
+<script type="text/javascript" src="/assets/js/search.js"></script> #}

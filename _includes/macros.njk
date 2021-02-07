@@ -5,7 +5,6 @@ layout: default
 {% macro noteTags(tags) %}
   {% if tags.length > 0 %}
     {% set sortedTags = tags | sort %}
-    Tagged
     {% for tag in sortedTags %}
       <a href="{{ site.url }}/tags/{{tag}}" title="Notes tagged {{ tag }}">{{ tag }}</a>
       {% if not loop.last %},
@@ -16,7 +15,6 @@ layout: default
 
 {% macro singleNote(note) %}
   {% set isSingle = page.url == note.url %}
-
   <article>
     <header>
       <h2>
@@ -28,14 +26,10 @@ layout: default
 
     <footer>
       <p>
-        {{ noteTags(note.data.tags) }}
-        {% if isSingle %}
-          <br/>
-          Posted
-          <time datetime="{{ note.data.date }}">
-            {{ note.data.date | safe }}
-          </time>
-        {% endif %}
+        <time datetime="{{ note.data.date | toISODateString }}">
+          {{ note.data.date | date("do MMMM yyyy") | safe }}
+        </time>
+        <span>{{ noteTags(note.data.tags) }}</span>
       </p>
     </footer>
   </article>

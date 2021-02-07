@@ -47,6 +47,7 @@ body > header > nav > ul {
 body > header > nav > ul > li {
   display: inline-block;
   margin-left: var(--root-spacing);
+  text-transform: lowercase;
 }
 
 body > footer > nav > ul {
@@ -88,18 +89,28 @@ blockquote {
 }
 
 article {
-  margin: calc(var(--root-spacing) * 2.5) 0;
+  margin: calc(var(--root-spacing) * 3) 0;
+}
+
+article:first-of-type {
+  margin-top: 0;
+}
+
+article:last-of-type {
+  margin-bottom: 0;
 }
 
 article > footer {
   color: gray;
-  font-size: smaller;
 }
 
 article > footer a {
   color: gray;
   text-decoration-color: gray;
-  text-decoration-style: dotted;
+}
+
+article > footer > p > time {
+  margin-right: calc(var(--root-spacing) / 2);
 }
 
 .katex-display {
