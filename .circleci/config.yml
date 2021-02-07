@@ -46,8 +46,7 @@ jobs:
           to: "s3://public.nikhil.io/stats/"
           arguments: |
             --delete \
-            --exclude "*.DS_Store*" \
-            --size-only \
+            --exclude "*.DS_Store*"
 
 workflows:
   version: 2
