@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{% from "macros.njk" import singleNote %}
+
+{% set note = {
+    url: url,
+    data: {
+        title: title,
+        templateContent: content,
+        tags: tags,
+        date: page.date,
+        category: category
+    },
+    templateContent: content
+} %}
+
+{{ singleNote(note) }}

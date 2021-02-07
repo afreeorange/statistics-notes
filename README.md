@@ -1,9 +1,24 @@
-# My Statistics Notes [![CircleCI](https://circleci.com/gh/afreeorange/statistics-notes.svg?style=svg)](https://circleci.com/gh/afreeorange/statistics-notes)
+# My Statistics Notes
 
-Notes from my various classes at Georgia Tech 🐝
+For my classes at Georgia Tech. Powered by `vim`, [11ty](https://www.11ty.dev/), S3, and Github Actions.
 
-## References
+## Working on Notes
 
-* [Steve Shao's Regression Notes](https://github.com/Steve-Shao/site-regression-cheatsheet)
-* [Hugo Book Configuration](https://github.com/alex-shpak/hugo-book#configuration)
+```bash
+# Install dependencies
+yarn
+
+# Start live-reloading server
+yarn start
+
+# Build (output in _site)
+yarn build
+
+# Deploy to S3_BUCKET in .env
+yarn deploy
+```
+
+## License
+
+[WTFPL](http://www.wtfpl.net/)
 

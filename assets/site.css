@@ -1,0 +1,41 @@
+:root {
+  --monospace-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    monospace;
+  --sans-serif-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  --line-height: 165%;
+  --root-spacing: 1em;
+}
+
+body {
+  max-width: 768px;
+  margin: 0 auto !important;
+  font-family: var(--sans-serif-family);
+  line-height: var(--line-height);
+}
+
+body > header > nav {
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+
+body > header > nav > ul {
+  text-align: right;
+}
+
+body > header > nav > ul > li {
+  display: inline-block;
+  margin-left: var(--root-spacing);
+}
+
+article {
+  margin: calc(var(--root-spacing) * 2.5) 0;
+}
+
+article > footer {
+  font-size: smaller;
+}
+
+.katex-display {
+  margin: calc(var(--root-spacing) * 2) 0;
+}

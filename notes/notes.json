@@ -1,0 +1,5 @@
+{
+    "layout": "note.njk",
+    "category": "notes",
+    "permalink": "{{ page.fileSlug | uuidWithNoSpaces }}/"
+}

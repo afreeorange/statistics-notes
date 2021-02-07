@@ -1,0 +1,34 @@
+---
+layout: default
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - note
+    - notes
+    - tags
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: Notes tagged "{{ tag }}"
+permalink: /tags/{{ tag }}/
+eleventyExcludeFromCollections: true
+---
+
+{% from "macros.njk" import singleNote %}
+
+{% set things = collections[tag] | reverse %}
+{% set numberOfThings = things | length %}
+
+<h2>
+  <strong>{{ numberOfThings }}</strong>
+  thing{% if numberOfThings > 1 %}s{% endif %}
+  tagged
+  <strong>“{{ tag }}”</strong>
+</h2>
+
+{% for post in things %}
+  {{ singleNote(post) }}
+{% endfor %}

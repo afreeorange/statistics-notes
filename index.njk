@@ -1,0 +1,16 @@
+---
+layout: default
+pagination:
+  data: collections.notes
+  size: 50
+  alias: notes
+  reverse: true
+permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+eleventyExcludeFromCollections: true
+---
+
+{% from "macros.njk" import singleNote %}
+
+{% for note in notes %}
+  {{ singleNote(note) }}
+{% endfor %}
