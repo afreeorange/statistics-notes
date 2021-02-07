@@ -10,7 +10,7 @@
 
   /* Some measurements. Rely on browser defaults for all else */
   --line-height: 150%;
-  --font-size: 14px;
+  --font-size: 16px;
   --root-spacing: 1em;
 
   /* Basic color stuff */
@@ -121,13 +121,19 @@ article > footer > p > time {
 }
 
 @media all and (max-width: 520px) {
+  :root {
+    --font-size: 14px;
+  }
+
   body > header > nav {
     display: block;
   }
+
   body > header > nav > ul {
     margin: 0;
     padding: 0;
   }
+
   body > header > nav > * {
     display: inline;
     font-size: var(--font-size);
