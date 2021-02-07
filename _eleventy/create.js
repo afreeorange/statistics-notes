@@ -1,7 +1,3 @@
-/**
- * Simple script to create posts per post type using Nunjucks templates.
- */
-
 const format = require("date-fns/format");
 const formatISO9075 = require("date-fns/formatISO9075");
 const fs = require("fs");
@@ -19,7 +15,7 @@ const makeBasicQuestion = (message, name, yellWith, transformer = null) => ({
 });
 
 const questions = [
-  makeBasicQuestion("Title", "title", "Enter a post title!"),
+  makeBasicQuestion("Title:", "title", "Enter a post title!"),
   makeBasicQuestion("Tags (comma-separated):", "tags", "Enter some tags, yo!"),
 ];
 
@@ -37,7 +33,6 @@ nunjucks.configure({ autoescape: false });
 const date = new Date();
 const timestamp = formatISO9075(date);
 const year = format(date, "yyyy");
-console.log(`Post will be timestamped "${timestamp}"`);
 
 const askQuestions = async () => {
   // Ask the basic questions
@@ -81,7 +76,7 @@ const askQuestions = async () => {
 
       if (fs.existsSync(`${postFolder}/${_newPostfile}`)) {
         console.log(
-          `! Well, file called ${_newPostfile} also already exists...`,
+          `! Well, file called ${_newPostfile} also already exists...`
         );
         continue;
       } else {
@@ -100,8 +95,5 @@ const askQuestions = async () => {
 };
 
 askQuestions().then((f) =>
-  /**
-   * TODO: Use path.resolve? Or just leave this alone because "it works"?
-   */
-  console.log("✔ Created", f),
+  console.log("✔ Created", f)
 );

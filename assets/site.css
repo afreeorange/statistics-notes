@@ -5,12 +5,14 @@
     helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   --line-height: 165%;
   --root-spacing: 1em;
+  --font-size: 14px;
 }
 
 body {
   max-width: 768px;
   margin: 0 auto !important;
   font-family: var(--sans-serif-family);
+  font-size: var(--font-size);
   line-height: var(--line-height);
 }
 
@@ -26,6 +28,23 @@ body > header > nav > ul {
 body > header > nav > ul > li {
   display: inline-block;
   margin-left: var(--root-spacing);
+}
+
+body > footer > nav > ul {
+  margin: 0;
+  padding: 0;
+}
+body > footer > nav > ul > li {
+  display: inline-block;
+  margin-right: calc(var(--root-spacing) / 2);
+}
+
+a {
+  color: black;
+  text-decoration-color: blue;
+}
+a:hover {
+  color: blue;
 }
 
 article {

@@ -22,12 +22,11 @@ eleventyExcludeFromCollections: true
 {% set things = collections[tag] | reverse %}
 {% set numberOfThings = things | length %}
 
-<h2>
+<p>
   <strong>{{ numberOfThings }}</strong>
   thing{% if numberOfThings > 1 %}s{% endif %}
-  tagged
-  <strong>“{{ tag }}”</strong>
-</h2>
+  tagged <strong>“{{ tag }}”</strong>
+</p>
 
 {% for post in things %}
   {{ singleNote(post) }}
