@@ -7,7 +7,9 @@ layout: default
     {% set sortedTags = tags | sort %}
     Tagged
     {% for tag in sortedTags %}
-      <a href="/tags/{{tag}}" title="Notes tagged {{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      <a href="{{ site.url }}/tags/{{tag}}" title="Notes tagged {{ tag }}">{{ tag }}</a>
+      {% if not loop.last %},
+      {% endif %}
     {% endfor %}
   {% endif %}
 {% endmacro %}
@@ -18,7 +20,7 @@ layout: default
   <article>
     <header>
       <h2>
-        <a href="{{ note.url }}" title="{{ note.data.title | superSafeString }}">{{ note.data.title }}</a>
+        <a href="{{ site.url }}{{ note.url }}" title="{{ note.data.title | superSafeString }}">{{ note.data.title }}</a>
       </h2>
     </header>
 
