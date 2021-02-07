@@ -39,7 +39,13 @@ const parser = require("markdown-it")({
   .use(require("./_eleventy/mark"))
   .use(require("markdown-it-prism"))
   .use(require("markdown-it-sup"))
-  .use(require("markdown-it-sub"));
+  .use(require("markdown-it-sub"))
+  .use(require("markdown-it-attribution"), {
+    classNameContainer: null,
+    classNameAttribution: null,
+    marker: "--",
+    removeMarker: false,
+  });
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setLibrary("md", parser);

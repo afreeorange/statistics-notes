@@ -16,6 +16,11 @@ body {
   line-height: var(--line-height);
 }
 
+body > header > nav > h1 > a {
+  color: blue;
+  text-decoration: none;
+}
+
 body > header > nav {
   display: grid;
   grid-template-columns: 50% auto;
@@ -51,10 +56,26 @@ article {
   margin: calc(var(--root-spacing) * 2.5) 0;
 }
 
+article figure {
+  margin: 0;
+  padding: 0;
+}
+
+article figcaption {
+  margin-left: var(--root-spacing);
+}
+
+article blockquote {
+  border-left: 1px solid blue;
+  margin: 0;
+  padding-left: var(--root-spacing);
+}
+
 article > footer {
   font-size: smaller;
 }
 
 .katex-display {
   margin: calc(var(--root-spacing) * 2) 0;
+  text-align: left!important;
 }

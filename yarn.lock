@@ -1508,6 +1508,11 @@ map-cache@^0.2.0:
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
   integrity sha1-wyq9C9ZSXZsFFkW7TyasXcmKDb8=
 
+markdown-it-attribution@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-attribution/-/markdown-it-attribution-0.1.1.tgz#e4e557a1caa8529feaecb1af886bccf835c9994f"
+  integrity sha512-8l8duqW1l5WJ/JrRaV7A9qF0P+x5L4t0+lybtE2NSPOVNFGmgvo2YxIxVo+3s7YcLA5KTdW7dBVGlztLtLF1yQ==
+
 markdown-it-prism@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/markdown-it-prism/-/markdown-it-prism-2.1.4.tgz#d7f52d811eb5f96813ec6a6013f85d939e99619c"

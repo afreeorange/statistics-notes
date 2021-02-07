@@ -8,7 +8,8 @@
     "build": "rm -rf _site && npx @11ty/eleventy",
     "clean": "rm -rf _site",
     "new": "node _eleventy/create.js",
-    "start": "npx @11ty/eleventy --watch --serve --port 9000"
+    "start": "npx @11ty/eleventy --watch --serve --port 9000",
+    "push": "git add . && git commit -m 'Incremental' && git push"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
@@ -17,6 +18,7 @@
     "inquirer": "^7.3.3",
     "js-beautify": "^1.13.5",
     "katex": "^0.12.0",
+    "markdown-it-attribution": "^0.1.1",
     "markdown-it-prism": "^2.1.4",
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0",
