@@ -9,7 +9,7 @@
     Segoe UI Emoji, Segoe UI Symbol;
 
   /* Some measurements. Rely on browser defaults for all else */
-  --line-height: 165%;
+  --line-height: 150%;
   --font-size: 14px;
   --root-spacing: 1em;
 
@@ -27,7 +27,7 @@ body {
   line-height: var(--line-height);
   margin: 0 auto !important;
   max-width: 768px;
-  padding: 0 var(--root-spacing);
+  padding: var(--root-spacing);
 }
 
 body > header > nav > h1 > a {
@@ -73,6 +73,15 @@ em {
   font-family: var(--serif-family);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  font-size: var(--font-size);
+}
+
 figure {
   margin: 0;
   padding: 0;
@@ -88,16 +97,9 @@ blockquote {
   padding-left: var(--root-spacing);
 }
 
-article {
-  margin: calc(var(--root-spacing) * 3) 0;
-}
-
-article:first-of-type {
-  margin-top: 0;
-}
-
-article:last-of-type {
-  margin-bottom: 0;
+article,
+section {
+  margin: calc(var(--root-spacing) * 2.5) 0;
 }
 
 article > footer {
@@ -116,4 +118,18 @@ article > footer > p > time {
 .katex-display {
   margin: calc(var(--root-spacing) * 2) 0;
   text-align: left !important;
+}
+
+@media all and (max-width: 520px) {
+  body > header > nav {
+    display: block;
+  }
+  body > header > nav > ul {
+    margin: 0;
+    padding: 0;
+  }
+  body > header > nav > * {
+    display: inline;
+    font-size: var(--font-size);
+  }
 }
