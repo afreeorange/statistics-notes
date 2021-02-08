@@ -6,9 +6,7 @@ layout: default
   {% if tags.length > 0 %}
     {% set sortedTags = tags | sort %}
     {% for tag in sortedTags %}
-      <a href="{{ site.url }}/tags/{{tag}}" title="Notes tagged {{ tag }}">{{ tag }}</a>
-      {% if not loop.last %},
-      {% endif %}
+      <a href="{{ site.url }}/tags/{{tag}}" title="Notes tagged {{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
     {% endfor %}
   {% endif %}
 {% endmacro %}
