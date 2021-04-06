@@ -18,7 +18,10 @@ yarn build
 yarn push
 ```
 
+## MathJAX / KaTeX References
+
+* [Quick, excellent stuff on MathOverflow](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+
 ## License
 
 [WTFPL](http://www.wtfpl.net/)
-

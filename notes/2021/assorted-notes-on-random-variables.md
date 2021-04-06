@@ -12,12 +12,7 @@ tags:
 
 ## Covariance
 
-
-$$
-Cov(X, Y) \equiv 
-    \sigma_{XY} \equiv
-    \text{Expectation of } (X - E[X]) \times (Y - E[Y])
-$$
+$Cov(X, Y) \equiv \sigma_{XY} \equiv \text{Expectation of } (X - E[X]) \times (Y - E[Y])$
 
 Important: Independence implies Zero Covariance. _The reverse is not always true!_
 

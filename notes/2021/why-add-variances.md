@@ -14,6 +14,26 @@ $X - Y = X + (-Y)$
 
 $\implies Var(X - Y) = (1)^2Var(X) + (-1)^2Var(Y) = Var(X) + Var(Y)$
 
+$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
+
+$$
+\begin{matrix}
+1 & x & x^2 \\
+1 & y & y^2 \\
+1 & z & z^2 \\
+\end{matrix}
+$$
+
+$$
+\begin{align}
+\sqrt{37} & = \sqrt{\frac{73^2-1}{12^2}} \\
+ & = \sqrt{\frac{73^2}{12^2}\cdot\frac{73^2-1}{73^2}} \\ 
+ & = \sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}} \\
+ & = \frac{73}{12}\sqrt{1 - \frac{1}{73^2}} \\ 
+ & \approx \frac{73}{12}\left(1 - \frac{1}{2\cdot73^2}\right)
+\end{align}
+$$
+
 But why is this additive?
 
 > We buy some cereal. The box says “16 ounces.” We know that’s not precisely the weight of the cereal in the box, just close. After all, one corn flake more or less would change the weight ever so slightly. Weights of such boxes of cereal vary somewhat, and our uncertainty about the exact weight is expressed by the variance (or standard deviation) of those weights.

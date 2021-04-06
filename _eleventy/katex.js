@@ -4,13 +4,15 @@ Like markdown-it-simplemath, this is a stripped down, simplified version of:
 https://github.com/runarberg/markdown-it-math
 
 It differs in that it takes (a subset of) LaTeX as input and relies on KaTeX
-for rendering output.
+for rendering output. It can do SVG rendering with MathJAX as well but
+live-reloading is dog-slow.
 */
 
 /*jslint node: true */
 "use strict";
 
 var katex = require("katex");
+var { execSync } = require("child_process");
 
 // Test if potential opening or closing delimieter
 // Assumes that there is a "$" at state.src[pos]
@@ -183,14 +185,17 @@ function math_block(state, start, end, silent) {
 }
 
 module.exports = function math_plugin(md, options) {
-  // Default options
-
   options = options || {};
 
-  // set KaTeX as the renderer for markdown-it-simplemath
-  var katexInline = function (latex) {
+  var texInline = function (latex) {
     options.displayMode = false;
+
+    // let result = execSync(`node ${__dirname}/tex-to-svg.js '${latex}'`);
+    // let buff = new Buffer.from(result.toString());
+    // let base64data = buff.toString("base64");
+
     try {
+      // return `<img src="data:image/svg+xml;base64,${base64data}" />`;
       return katex.renderToString(latex, options);
     } catch (error) {
       if (options.throwOnError) {
@@ -201,12 +206,18 @@ module.exports = function math_plugin(md, options) {
   };
 
   var inlineRenderer = function (tokens, idx) {
-    return katexInline(tokens[idx].content);
+    return texInline(tokens[idx].content);
   };
 
-  var katexBlock = function (latex) {
+  var texBlock = function (latex) {
     options.displayMode = true;
+
+    // let result = execSync(`node ${__dirname}/tex-to-svg.js '${latex}'`);
+    // let buff = new Buffer.from(result.toString());
+    // let base64data = buff.toString("base64");
+
     try {
+      // return `<p><img src="data:image/svg+xml;base64,${base64data}" /></p>`;
       return "<p>" + katex.renderToString(latex, options) + "</p>";
     } catch (error) {
       if (options.throwOnError) {
@@ -217,7 +228,7 @@ module.exports = function math_plugin(md, options) {
   };
 
   var blockRenderer = function (tokens, idx) {
-    return katexBlock(tokens[idx].content) + "\n";
+    return texBlock(tokens[idx].content) + "\n";
   };
 
   md.inline.ruler.after("escape", "math_inline", math_inline);
