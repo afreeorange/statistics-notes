@@ -1,27 +1,26 @@
 {% if pagination %}
-  <footer>
+<footer>
+  {% if pagination.items.length > 1 %}
     <nav>
       <ul>
-        {% if pagination.items.length >= pagination.size %}
-          <li>
+        <li>
+          {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}" title="Previous page">
+            {% endif %}
+            <span>Older</span>
             {% if pagination.href.next %}
-              <a href="{{ site.url }}{{ pagination.href.next }}" title="Previous page">
-              {% endif %}
-              <span>Older</span>
-              {% if pagination.href.next %}
-              </a>
+            </a>
+          {% endif %}
+        </li>
+        <li>
+          {% if pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}" title="Next page">
             {% endif %}
-          </li>
-          <li>
+            <span>Newer</span>
             {% if pagination.href.previous %}
-              <a href="{{ site.url }}{{ pagination.href.previous }}" title="Next page">
-              {% endif %}
-              <span>Newer</span>
-              {% if pagination.href.previous %}
-              </a>
-            {% endif %}
-          </li>
-        {% endif %}
+            </a>
+          {% endif %}
+        </li>
         <li>
           {{ pagination.pageNumber + 1 }}
           <em>of</em>
@@ -29,5 +28,6 @@
         </li>
       </ul>
     </nav>
-  </footer>
+  {% endif %}
+</footer>
 {% endif %}
