@@ -16,7 +16,7 @@
   /* Basic color stuff */
   --color-primary: #111;
   --color-secondary: blue;
-  --color-tertiary: gray;
+  --color-tertiary: #ccc;
 }
 
 body {
@@ -74,12 +74,17 @@ em {
 }
 
 h1,
-h2,
-h3,
+h2 {
+  font-size: calc(var(--font-size) * 1.25);
+}
+h3 {
+  font-size: calc(var(--font-size) * 1.125);
+  color: #666;
+}
 h4,
-h5,
 h5 {
-  font-size: var(--font-size);
+  font-size: calc(var(--font-size) * 1);
+  color: #999;
 }
 
 figure {
@@ -107,12 +112,12 @@ article > header > h2 > a {
 }
 
 article > footer {
-  color: gray;
+  color: var(--color-tertiary);
 }
 
 article > footer a {
-  color: gray;
-  text-decoration-color: gray;
+  color: var(--color-tertiary);
+  text-decoration-color: var(--color-tertiary);
 }
 
 article > footer > p > time {
@@ -126,7 +131,7 @@ article > footer > p > time {
 
 @media all and (max-width: 520px) {
   :root {
-    --font-size: 14px;
+    --font-size: 13px;
   }
 
   body > header > nav {
