@@ -3,6 +3,10 @@ layout: page
 title: Bookmarks
 ---
 
+## LaTeX / MathJAX Reference
+
+* [A truly excellent resource, the only one I've ever needed](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+
 ## YouTube Channels
 
 * [jbstatistics](https://www.youtube.com/channel/UCiHi6xXLzi9FMr9B0zgoHqA)  - Clear, short, precise
