@@ -152,6 +152,11 @@ module.exports = (eleventyConfig) => {
     format(toDate(dateString), formatString)
   );
 
+  eleventyConfig.addFilter(
+    "editLink",
+    (relativePath) => `${site.githubRepository}/edit/master/${relativePath}`
+  );
+
   eleventyConfig.addFilter("toISODateString", (dateString) =>
     formatISO(toDate(dateString))
   );

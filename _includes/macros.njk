@@ -24,6 +24,7 @@ layout: default
 
     <footer>
       <p>
+        <a href="{{ note.inputPath | editLink }}">Edit</a>
         <time datetime="{{ note.data.date | toISODateString }}">
           {{ note.data.date | date("do MMMM yyyy") | safe }}
         </time>

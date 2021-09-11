@@ -120,6 +120,7 @@ article > footer a {
   text-decoration-color: var(--color-tertiary);
 }
 
+article > footer > p > a:first-child,
 article > footer > p > time {
   margin-right: calc(var(--root-spacing) / 2);
 }
