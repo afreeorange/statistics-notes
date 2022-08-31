@@ -13,7 +13,9 @@ jobs:
 
     steps:
       - checkout
-      - git lfs fetch
+      - run:
+          name: 👷‍♂️ Fetch LFS objects
+          command: git lfs fetch
 
       - restore_cache:
           name: 🗃 Restoring package cache
@@ -33,7 +35,7 @@ jobs:
             - ~/.cache/yarn
 
       - run:
-          name: Building the site
+          name: 🛠 Building the site
           command: yarn build
 
       - aws-s3/sync:
