@@ -7,15 +7,18 @@ orbs:
 jobs:
   build-and-deploy:
     docker:
-      # This is their "Next Generation" image
-      # https://circleci.com/developer/images/image/cimg/node
       - image: cimg/node:lts
 
     steps:
       - checkout
+
+      - run:
+          name: 💾 Install git-lfs
+          command: sudo apt-get install git-lfs
+
       - run:
           name: 👷‍♂️ Fetch LFS objects
-          command: git lfs fetch
+          command: git lfs pull
 
       - restore_cache:
           name: 🗃 Restoring package cache
