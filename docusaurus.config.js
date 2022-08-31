@@ -25,7 +25,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: "/stats",
+          routeBasePath: "/",
           remarkPlugins: [math],
           rehypePlugins: [katex],
           sidebarPath: require.resolve("./sidebars.js"),
