@@ -12,7 +12,7 @@ const config = {
   title: "Nikhil's Stats Notes",
   tagline: "Stuff I learned at Georgia Tech 🐝",
   url: "https://public.nikhil.io",
-  baseUrl: "/",
+  baseUrl: "/stats/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
