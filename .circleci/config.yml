@@ -13,6 +13,7 @@ jobs:
 
     steps:
       - checkout
+      - git lfs fetch
 
       - restore_cache:
           name: 🗃 Restoring package cache
@@ -35,9 +36,6 @@ jobs:
           name: Building the site
           command: yarn build
 
-      # Notes:
-      # 1) You have to set the aws-* config params.
-      # 2) The sync flags should match _scripts/push-site.js
       - aws-s3/sync:
           aws-region: AWS_DEFAULT_REGION
           aws-access-key-id: AWS_ACCESS_KEY_ID
