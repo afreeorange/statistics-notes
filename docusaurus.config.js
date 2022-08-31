@@ -11,8 +11,8 @@ const katex = require("rehype-katex");
 const config = {
   title: "Nikhil's Stats Notes",
   tagline: "Stuff I learned at Georgia Tech 🐝",
-  url: "https://public.nikhil.io/stats",
-  baseUrl: "/stats/",
+  url: "https://public.nikhil.io",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
