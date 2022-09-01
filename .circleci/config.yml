@@ -7,12 +7,18 @@ orbs:
 jobs:
   build-and-deploy:
     docker:
-      # This is their "Next Generation" image
-      # https://circleci.com/developer/images/image/cimg/node
       - image: cimg/node:lts
 
     steps:
       - checkout
+
+      - run:
+          name: 💾 Install git-lfs
+          command: sudo apt-get install git-lfs
+
+      - run:
+          name: 👷‍♂️ Fetch LFS objects
+          command: git lfs pull
 
       - restore_cache:
           name: 🗃 Restoring package cache
@@ -32,12 +38,9 @@ jobs:
             - ~/.cache/yarn
 
       - run:
-          name: Building the site
+          name: 🛠 Building the site
           command: yarn build
 
-      # Notes:
-      # 1) You have to set the aws-* config params.
-      # 2) The sync flags should match _scripts/push-site.js
       - aws-s3/sync:
           aws-region: AWS_DEFAULT_REGION
           aws-access-key-id: AWS_ACCESS_KEY_ID
