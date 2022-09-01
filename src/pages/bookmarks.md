@@ -2,6 +2,13 @@
 title: Bookmarks
 ---
 
+## Sources of Knowledge
+
+- Human Data
+- Domain Knowledge
+- Known Rules
+
+---
 
 * [Big Six Matrix Decompositions](https://nhigham.com/2022/05/18/the-big-six-matrix-factorizations/)
 * [Probability and Statistics Cheatsheet](http://statistics.zone/)

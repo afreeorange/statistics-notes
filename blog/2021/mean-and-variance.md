@@ -7,9 +7,7 @@ tags:
     - variance
     - probability
     - 6644
-    
+
 ---
 
 The "average" is just a _special case_ of Expected Value where all the probabilities of occurrence of each of the observed values is the same!
-
-
