@@ -112,3 +112,10 @@ jupyter kernelspec list
 jupyter kernelspec uninstall <name of kernel>
 ```
 
+Dimensionality Reduction: You want to discover the "latent dimensions along which the data varies".
+
+---
+
+[Cheaper Diploma Frame](https://www.amazon.com/gp/product/B08TP9Z8WF/)
+
+[Deep Learning course from Andrew Ng](https://www.deeplearning.ai/courses/ai-for-medicine-specialization/)
