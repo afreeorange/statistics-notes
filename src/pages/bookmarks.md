@@ -119,3 +119,5 @@ Dimensionality Reduction: You want to discover the "latent dimensions along whic
 [Cheaper Diploma Frame](https://www.amazon.com/gp/product/B08TP9Z8WF/)
 
 [Deep Learning course from Andrew Ng](https://www.deeplearning.ai/courses/ai-for-medicine-specialization/)
+
+[Andrej Karpathy - Deep Learning Zero to Hero](https://karpathy.ai/zero-to-hero.html)
