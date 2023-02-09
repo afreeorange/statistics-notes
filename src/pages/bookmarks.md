@@ -121,3 +121,5 @@ Dimensionality Reduction: You want to discover the "latent dimensions along whic
 [Deep Learning course from Andrew Ng](https://www.deeplearning.ai/courses/ai-for-medicine-specialization/)
 
 [Andrej Karpathy - Deep Learning Zero to Hero](https://karpathy.ai/zero-to-hero.html)
+
+[GPT in 60 Lines of NumPy](https://jaykmody.com/blog/gpt-from-scratch/)
