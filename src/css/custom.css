@@ -14,8 +14,8 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
 
+  --ifm-font-size-base: 110%;
   --ifm-code-font-size: 95%;
-  --ifm-font-size-base: 95%;
   --ifm-font-family-base: "Circular", "Helvetica Neue", "Helvetica", "Arial",
     sans-serif;
   --ifm-font-family-monospace: Menlo, Consolas, Monaco, Liberation Mono,

@@ -9,7 +9,7 @@ const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Nikhil's Stats Notes",
+  title: "Nikhil&#8217;s Stats Notes",
   tagline: "Stuff I learned at Georgia Tech 🐝",
   url: "https://public.nikhil.io",
   baseUrl: "/stats/",
