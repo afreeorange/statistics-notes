@@ -17,7 +17,7 @@ jobs:
       - checkout
 
       - run:
-          name: 💾 Install git-lfs
+          name: 👷‍♂️ Install git-lfs
           command: sudo apt-get install git-lfs
 
       - run:
@@ -25,24 +25,24 @@ jobs:
           command: git lfs pull
 
       - restore_cache:
-          name: Restore pnpm Package Cache
+          name: 👇 Restore pnpm Package Cache
           keys:
             - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
 
       - run:
-          name: Install pnpm package manager
+          name: 👷 Install pnpm package manager
           command: |
             corepack enable
             corepack prepare pnpm@latest-9 --activate
             pnpm config set store-dir .pnpm-store
 
       - run:
-          name: Install Dependencies
+          name: 👷 Install Dependencies
           command: |
             pnpm install
 
       - save_cache:
-          name: Save pnpm Package Cache
+          name: 💾 Save pnpm Package Cache
           key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
           paths:
             - .pnpm-store
