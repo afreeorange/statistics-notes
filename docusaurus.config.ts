@@ -92,6 +92,7 @@ const config: Config = {
           label: "Notes",
         },
         { to: "/blog", label: "Blog", position: "left" },
+        { to: "/bookmarks", label: "Bookmarks", position: "left" },
         {
           href: "https://github.com/facebook/docusaurus",
           label: "GitHub",
