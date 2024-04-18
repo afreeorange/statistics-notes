@@ -5,7 +5,7 @@ tags:
     - matplotlib
     - cool
     - graphing
-    
+
 ---
 
 [Here's a really cool way](https://matplotlib.org/matplotblog/posts/matplotlib-cyberpunk-style/) to generate Cyberpunky graphs with ye olde `matplotlib`.

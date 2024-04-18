@@ -1,10 +1,10 @@
-const format = require("date-fns/format");
-const formatISO9075 = require("date-fns/formatISO9075");
-const fs = require("fs");
-const inquirer = require("inquirer");
-const slugify = require("@sindresorhus/slugify");
-const mkdirp = require("mkdirp");
-const nunjucks = require("nunjucks");
+import fs from "node:fs";
+
+import inquirer from "inquirer";
+import slugify from "@sindresorhus/slugify";
+import nunjucks from "nunjucks";
+import { mkdirp } from "mkdirp";
+import { format, formatISO9075 } from "date-fns";
 
 const makeBasicQuestion = (message, name, yellWith, transformer = null) => ({
   type: "input",
@@ -43,9 +43,9 @@ const askQuestions = async () => {
     .filter((_) => _ !== "");
 
   // Prepare paths
-  let postFolder = `${__dirname}/../blog/${year}`;
+  let postFolder = `./blog/${year}`;
   let postFile = `${slugify(answers.title)}.md`;
-  let postTemplatePath = `${__dirname}/note.template`;
+  let postTemplatePath = "./.scripts/note.template";
 
   // Read the appropriate template
   const template = fs.readFileSync(postTemplatePath, {
@@ -78,7 +78,6 @@ const askQuestions = async () => {
         console.log(
           `! Well, file called ${_newPostfile} also already exists...`
         );
-        continue;
       } else {
         console.log(`Calling the post "${_newPostfile}"`);
         break;

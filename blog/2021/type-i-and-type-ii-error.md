@@ -8,4 +8,4 @@ tags:
 
 ---
 
-![](/img/error.jpg)
+![](/img/blog/error.jpg)

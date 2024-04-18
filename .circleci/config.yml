@@ -1,7 +1,11 @@
+# References
+#
+# https://pnpm.io/continuous-integration#circleci
+# https://circleci.com/developer/orbs/orb/circleci/aws-s3
+
 version: 2.1
 
 orbs:
-  # https://circleci.com/developer/orbs/orb/circleci/aws-s3
   aws-s3: circleci/aws-s3@2.0.0
 
 jobs:
@@ -21,32 +25,38 @@ jobs:
           command: git lfs pull
 
       - restore_cache:
-          name: 🗃 Restoring package cache
+          name: Restore pnpm Package Cache
           keys:
-            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
 
-      # This command is for yarn v1 only! See this:
-      # https://circleci.com/docs/2.0/yarn/
       - run:
-          name: ⏳ Install Dependencies
-          command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+          name: Install pnpm package manager
+          command: |
+            corepack enable
+            corepack prepare pnpm@latest-9 --activate
+            pnpm config set store-dir .pnpm-store
+
+      - run:
+          name: Install Dependencies
+          command: |
+            pnpm install
 
       - save_cache:
-          name: 💾 Saving package cache
-          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          name: Save pnpm Package Cache
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
           paths:
-            - ~/.cache/yarn
+            - .pnpm-store
 
       - run:
           name: 🛠 Building the site
-          command: yarn build
+          command: pnpm build
 
       - aws-s3/sync:
           aws-region: AWS_DEFAULT_REGION
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           from: build/
-          to: "s3://public.nikhil.io/stats/"
+          to: "s3://public.nikhil.io/statistics-notes/"
           arguments: |
             --delete \
             --exclude "*.DS_Store*"
@@ -61,4 +71,3 @@ workflows:
           filters:
             branches:
               only: master
-
