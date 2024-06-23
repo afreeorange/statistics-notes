@@ -10,4 +10,4 @@ tags:
 
 [Here's a really cool way](https://matplotlib.org/matplotblog/posts/matplotlib-cyberpunk-style/) to generate Cyberpunky graphs with ye olde `matplotlib`.
 
-![](/img/blog/cyberpunk.png)
+![](/img/cyberpunk.png)

@@ -1,9 +1,8 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-
-const math = require("remark-math");
-const katex = require("rehype-katex");
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 const config: Config = {
   title: "Nikhil's Notes",
@@ -28,8 +27,8 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
 
           editUrl: "https://github.com/afreeorange/statistics-notes/",
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: false,
@@ -37,8 +36,8 @@ const config: Config = {
           blogSidebarCount: "ALL",
 
           editUrl: "https://github.com/afreeorange/statistics-notes/",
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -87,17 +86,12 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "notesSidebar",
           position: "left",
           label: "Notes",
         },
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/bookmarks", label: "Bookmarks", position: "left" },
-        {
-          href: "https://github.com/facebook/docusaurus",
-          label: "GitHub",
-          position: "right",
-        },
       ],
     },
 

@@ -7,7 +7,7 @@ tags:
     - 6644
     - notes
     - lists
-    
+
 ---
 
 ## Covariance
@@ -24,7 +24,7 @@ $E[X + Y] = E[X] + E[Y]$
 
 and generally,
 
-$E[\sum_{i=1}^n{X_{i}}] = \sum_{i=1}^n{E[X_{i}]}$ 
+$E[\sum_{i=1}^n{X_{i}}] = \sum_{i=1}^n{E[X_{i}]}$
 
 ---
 
